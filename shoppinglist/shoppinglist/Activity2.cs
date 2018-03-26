@@ -12,15 +12,16 @@ using Android.Widget;
 
 namespace shoppinglist
 {
-    class Activity2 : Activity
+    [Activity(Label = "Activity2")]
+    public class Activity2 : Activity
     {
-        private List<string> Spesa; //lista che contiene tutti gli elementi selezionabili 
+        private List<string> Spesa; // lista che contiene tutti gli elementi selezionabili 
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Main);
-            //init e aggiunta elementi
+            // init e aggiunta elementi
             Spesa = new List<String>();
             Spesa.Add("pane");
             Spesa.Add("burro");
@@ -35,4 +36,5 @@ namespace shoppinglist
             Spesa.Add("insalata");
             Spesa.Add("torta");
         }
+    }
 }
