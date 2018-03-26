@@ -15,14 +15,15 @@ namespace shoppinglist
     [Activity(Label = "Activity2")]
     public class Activity2 : Activity
     {
-        private List<string> Spesa; // lista che contiene tutti gli elementi selezionabili 
-
+        List<string> Spesa; // lista che contiene tutti gli elementi selezionabili 
+        List<string> SpesaConfermata; // lista che contiene gli elementi selezionati
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.Activity2);
             Button conferma = FindViewById<Button>(Resource.Id.conferma);
             ListView selezione = FindViewById<ListView>(Resource.Id.listadacreare);
+            
             // init e aggiunta elementi
             Spesa = new List<String>();
             Spesa.Add("pane");
@@ -37,11 +38,35 @@ namespace shoppinglist
             Spesa.Add("carne");
             Spesa.Add("insalata");
             Spesa.Add("torta");
+
+            SpesaConfermata = new List<string>();
+
             ArrayAdapter arrayAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SelectDialogMultiChoice, Spesa);
             selezione.Adapter = arrayAdapter;
             selezione.ChoiceMode = ChoiceMode.Multiple;
+            Intent avvia;
+            conferma.Click += delegate
+            {
+                SpesaConfermata.Clear();
+                for (int i = 0; i < Spesa.Count; i++)
+                {
+                    if (selezione.IsItemChecked(i))
+                    {
+                        SpesaConfermata.Append(Spesa[i]);
+                    }
+                }
+                if (SpesaConfermata.Count == 0)
+                {
 
-
+                }
+                else
+                {
+                    avvia = new Intent(this, typeof(Activity3));
+                    avvia.PutStringArrayListExtra("lista", SpesaConfermata);
+                    StartActivity(avvia);
+                    SpesaConfermata.Clear();
+                }
+            };
         }
     }
 }
