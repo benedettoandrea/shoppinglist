@@ -2,5 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">     
+    android:layout_height="match_parent">
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="crea lista"
+        android:id="@+id/crea" />
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="recupera lista"
+        android:id="@+id/recupera" />
 </LinearLayout>

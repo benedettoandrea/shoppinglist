@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Content;
 
 namespace shoppinglist
 {
@@ -10,9 +11,19 @@ namespace shoppinglist
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
+            Button crea = FindViewById<Button>(Resource.Id.crea);
+            Button recupera = FindViewById<Button>(Resource.Id.recupera);
+            Intent avvia;
+            crea.Click += delegate
+            {
+                avvia = new Intent(this, typeof(Activity2));
+                StartActivity(avvia);
+            };
+            recupera.Click += delegate
+            {
+                //ook
+            };
         }
     }
 }
