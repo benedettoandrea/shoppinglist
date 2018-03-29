@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace shoppinglist
 {
-    [Activity(Label = "Activity2")]
+    [Activity(Label = "Crea una nuova lista")]
     public class Activity2 : Activity
     {
         List<string> Spesa; // lista che contiene tutti gli elementi selezionabili 
@@ -46,18 +46,18 @@ namespace shoppinglist
             selezione.ChoiceMode = ChoiceMode.Multiple;
             Intent avvia;
             conferma.Click += delegate
-            {
+            {               
                 SpesaConfermata.Clear();
                 for (int i = 0; i < Spesa.Count; i++)
                 {
                     if (selezione.IsItemChecked(i))
                     {
-                        SpesaConfermata.Append(Spesa[i]);
+                        SpesaConfermata.Add(Spesa[i].ToString());
                     }
                 }
-                if (SpesaConfermata.Count == 0)
-                {
-
+                if (SpesaConfermata.ToArray().Length == 0)
+                {                    
+                    Toast.MakeText(this, "non puoi avere una lista della spesa vuota", ToastLength.Long).Show();
                 }
                 else
                 {
@@ -65,7 +65,7 @@ namespace shoppinglist
                     avvia.PutStringArrayListExtra("lista", SpesaConfermata);
                     StartActivity(avvia);
                     SpesaConfermata.Clear();
-                }
+                }                
             };
         }
     }

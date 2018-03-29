@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace shoppinglist
 {
-    [Activity(Label = "Activity3")]
+    [Activity(Label = "Lista corrente")]
     public class Activity3 : Activity
     {
         ListView visualizza;

@@ -22,7 +22,7 @@ namespace shoppinglist
             };
             recupera.Click += delegate
             {
-                //ook
+                Toast.MakeText(this, "questa funzionalità è attualmente non disponibile", ToastLength.Long).Show();
             };
         }
     }
