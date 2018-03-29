@@ -41,6 +41,43 @@ namespace shoppinglist
 			}
 		}
 		
+		public partial class Color
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int primaryColor = 2130968576;
+			
+			// aapt resource value: 0x7f040002
+			public const int primaryDarkColor = 2130968578;
+			
+			// aapt resource value: 0x7f040001
+			public const int primaryLightColor = 2130968577;
+			
+			// aapt resource value: 0x7f040006
+			public const int primaryTextColor = 2130968582;
+			
+			// aapt resource value: 0x7f040003
+			public const int secondaryColor = 2130968579;
+			
+			// aapt resource value: 0x7f040005
+			public const int secondaryDarkColor = 2130968581;
+			
+			// aapt resource value: 0x7f040004
+			public const int secondaryLightColor = 2130968580;
+			
+			// aapt resource value: 0x7f040007
+			public const int secondaryTextColor = 2130968583;
+			
+			static Color()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Color()
+			{
+			}
+		}
+		
 		public partial class Drawable
 		{
 			
@@ -60,20 +97,20 @@ namespace shoppinglist
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int conferma = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int conferma = 2131099648;
 			
-			// aapt resource value: 0x7f050003
-			public const int crea = 2131034115;
+			// aapt resource value: 0x7f060003
+			public const int crea = 2131099651;
 			
-			// aapt resource value: 0x7f050002
-			public const int listacreata = 2131034114;
+			// aapt resource value: 0x7f060002
+			public const int listacreata = 2131099650;
 			
-			// aapt resource value: 0x7f050001
-			public const int listadacreare = 2131034113;
+			// aapt resource value: 0x7f060001
+			public const int listadacreare = 2131099649;
 			
-			// aapt resource value: 0x7f050004
-			public const int recupera = 2131034116;
+			// aapt resource value: 0x7f060004
+			public const int recupera = 2131099652;
 			
 			static Id()
 			{
@@ -110,8 +147,8 @@ namespace shoppinglist
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040000
-			public const int app_name = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int app_name = 2131034112;
 			
 			static String()
 			{

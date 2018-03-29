@@ -17,6 +17,7 @@ using Android.App;
 [assembly: ComVisible(false)]
 [assembly: Application(Icon = "@drawable/Icon")]
 
+
 // Version information for an assembly consists of the following four values:
 //
 //      Major Version
