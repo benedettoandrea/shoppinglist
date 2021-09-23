@@ -1,2 +1,2 @@
 # shoppinglist
-mini app di gestione liste per la spesa
+mini app Android per la gestione di liste per la spesa
